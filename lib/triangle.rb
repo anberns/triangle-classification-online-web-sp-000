@@ -12,6 +12,8 @@ class Triangle
     if @s1 <= 0 || @s2 <= 0 || @s3 <= 0 
       raise TriangleError
     end
+    sorted_sides = []
+    sorted_sides << @s1
     
     if @s1 == @s2 && @s1 == @s3 
       return :equilateral
