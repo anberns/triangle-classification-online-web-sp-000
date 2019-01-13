@@ -14,6 +14,11 @@ class Triangle
     end
     sorted_sides = []
     sorted_sides << @s1
+    sorted_sides << @s2
+    sorted_sides << @s3
+    sorted_sides.sort!
+    
+    if sorted_sides[0] + sorted_sides[1]
     
     if @s1 == @s2 && @s1 == @s3 
       return :equilateral
@@ -31,4 +36,3 @@ class Triangle
 end
 
 
-  
