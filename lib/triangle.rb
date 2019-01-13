@@ -26,7 +26,7 @@ class Triangle
     end 
   end
   
-  class TriangleError < StandardErrord
+  class TriangleError < StandardError
     def message 
       "something is wrong with your side values"
     end
