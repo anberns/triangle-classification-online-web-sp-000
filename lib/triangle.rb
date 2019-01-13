@@ -11,7 +11,10 @@ class Triangle
   def kind 
     if @s1 <= 0 || @s2 <= 0 || @s3 <= 0 
       begin 
-        raise TriangleError 
+        raise TriangleError
+        rescue TriangleError => error 
+          puts error.message 
+        end
       end
     end
     
@@ -24,7 +27,10 @@ class Triangle
     end 
   end
   
-  class TriangleError < StandardError
+  class TriangleError < StandardErrord
+    def message 
+      "something is wrong with your side values"
+    end
   end
     
     
