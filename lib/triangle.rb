@@ -9,6 +9,8 @@ class Triangle
   end 
   
   def kind 
+    if 
+    
     if @s1 == @s2 && @s1 == @s3 
       return :equilateral
     elsif @s1 == @s2 || @s1 == @s3 || @s2 == @s3 
@@ -17,6 +19,9 @@ class Triangle
       return :scalene 
     end 
   end
+  
+  class TriangleError < StandardError
+    
     
 end
 
