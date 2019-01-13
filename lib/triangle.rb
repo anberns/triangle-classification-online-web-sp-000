@@ -9,7 +9,11 @@ class Triangle
   end 
   
   def kind 
-    if 
+    if @s1 <= 0 || @s2 <= 0 || @s3 <= 0 
+      begin 
+        raise TriangleError 
+      end
+    end
     
     if @s1 == @s2 && @s1 == @s3 
       return :equilateral
@@ -25,3 +29,5 @@ class Triangle
     
 end
 
+
+  
